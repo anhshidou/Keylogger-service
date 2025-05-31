@@ -3,4 +3,4 @@
   Previous IPDB not found, fall back to full compilation.
   All 212 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
-  KeyloggerTest.vcxproj -> D:\HĐH\KeyloggerTest\x64\Release\KeyloggerTest.exe
+  KeyloggerTest.vcxproj -> C:\Users\ranin\source\repos\anhshidou\Keylogger-service\KeyloggerTest\x64\Release\KeyloggerTest.exe

